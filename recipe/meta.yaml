@@ -1,4 +1,4 @@
-{% set version = '0.3' %}
+{% set version = "0.3.1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/ggstance_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/ggstance/ggstance_{{ version }}.tar.gz
-  sha256: f1427f2dee092a2063ebb66850d4eae9b9f5c6994cea56c78aa8a3ac9525286b
+  sha256: 704f7702540a149b352fa5d05dfad62acb5b3b77da6e499ae12d66a55a1fee6c
 
 build:
   number: 0
