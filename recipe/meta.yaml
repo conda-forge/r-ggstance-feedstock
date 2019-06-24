@@ -1,4 +1,4 @@
-{% set version = '0.3.1' %}
+{% set version = "0.3.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ggstance_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggstance/ggstance_{{ version }}.tar.gz
-  sha256: 704f7702540a149b352fa5d05dfad62acb5b3b77da6e499ae12d66a55a1fee6c
+  sha256: 2887ff51846a3261406b5beca06b690a97b7bb951b3c2c5071bf83557482111d
 
 build:
   noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
