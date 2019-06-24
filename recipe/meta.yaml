@@ -1,4 +1,4 @@
-{% set version = '0.3.1' %}
+{% set version = '0.3.2' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: ggstance_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/ggstance_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggstance/ggstance_{{ version }}.tar.gz
-  sha256: 704f7702540a149b352fa5d05dfad62acb5b3b77da6e499ae12d66a55a1fee6c
+  sha256: 2887ff51846a3261406b5beca06b690a97b7bb951b3c2c5071bf83557482111d
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -26,13 +25,13 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
-    - r-ggplot2 >=3.0.0
+    - r-ggplot2 >=3.2.0
     - r-plyr
     - r-rlang
     - r-withr >=2.0.0
   run:
     - r-base
-    - r-ggplot2 >=3.0.0
+    - r-ggplot2 >=3.2.0
     - r-plyr
     - r-rlang
     - r-withr >=2.0.0
@@ -52,9 +51,24 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
+
+# Package: ggstance
+# Title: Horizontal 'ggplot2' Components
+# Version: 0.3.2
+# Authors@R: c( person("Lionel", "Henry", , "lionel@rstudio.com", role = c("aut", "cre")), person("Hadley", "Wickham", , "hadley@rstudio.com", "aut"), person("Winston", "Chang", , "winston@rstudio.com", "aut"), person("RStudio", role = "cph") )
+# Description: A 'ggplot2' extension that provides flipped components: horizontal versions of 'Stats' and 'Geoms', and vertical versions of 'Positions'.
+# Depends: R (>= 3.1.0)
+# Imports: ggplot2 (>= 3.2.0), plyr, rlang, withr (>= 2.0.0)
+# Suggests: Hmisc, testthat, vdiffr (>= 0.3.0)
+# License: GPL-3
+# LazyData: true
+# Encoding: UTF-8
+# RoxygenNote: 6.1.1
+# Collate: 'flip-aes.R' 'geom-barh.R' 'legend-draw.R' 'geom-boxploth.R' 'geom-colh.R' 'geom-crossbarh.R' 'geom-errorbarh.R' 'geom-histogramh.R' 'geom-linerangeh.R' 'geom-pointrangeh.R' 'geom-violinh.R' 'ggstance.R' 'position-dodgev.R' 'position-dodge2v.R' 'position-jitterdodgev.R' 'position-stackv.R' 'position.R' 'stat-binh.R' 'stat-boxploth.R' 'stat-counth.R' 'stat-summaryh.R' 'stat-xdensity.R'
+# NeedsCompilation: no
+# Packaged: 2019-06-24 14:45:11 UTC; lionel
+# Author: Lionel Henry [aut, cre], Hadley Wickham [aut], Winston Chang [aut], RStudio [cph]
+# Maintainer: Lionel Henry <lionel@rstudio.com>
+# Repository: CRAN
+# Date/Publication: 2019-06-24 15:20:03 UTC
