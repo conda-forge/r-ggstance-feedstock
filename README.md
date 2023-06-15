@@ -1,11 +1,11 @@
-About r-ggstance
-================
+About r-ggstance-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ggstance-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=ggstance
 
 Package license: GPL-3
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ggstance-feedstock/blob/main/LICENSE.txt)
 
 Summary: A 'ggplot2' extension that provides flipped components: horizontal versions of 'Stats' and 'Geoms', and vertical versions of 'Positions'.
 
